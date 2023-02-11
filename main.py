@@ -22,17 +22,6 @@ time.sleep(1)
 print("1")
 time.sleep(1)
 
-def countdown(t):
-    
-    while t:
-        mins, secs = divmod(t, 60)
-        timer = '{:02d}:{:02d}'.format(mins, secs)
-        print(timer, end="\r")
-        time.sleep(1)
-        t -= 1
-      
-    print('Fire in the hole!!')
-
 
 
 os.system('cls' if os.name == 'nt' else 'clear')
@@ -57,7 +46,25 @@ while True:
         r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=headers)
         print(Fore.WHITE + "Sent message: ")
         print(Fore.YELLOW + payload['content'])
+        def countdown(t):
+    
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t -= 1
+      
+    print('Fire in the hole!!')
+  
+  
+# input time in seconds
+t = waktu1
+  
+# function call
+
         print(Fore.YELLOW + payload[countdown(int(t))])
+
 
         response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
 
