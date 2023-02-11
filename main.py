@@ -54,13 +54,7 @@ while True:
                 break
             else:
                 time.sleep(waktu1)
-
-                message_id = messages[0]['id']
-                response = requests.delete(f'https://discord.com/api/v9/channels/{channel_id}/messages/{message_id}', headers=headers)
-                if response.status_code == 204:
-                    print(Fore.GREEN + f'Pesan dengan ID {message_id} berhasil dihapus')
-                else:
-                    print(Fore.RED + f'Gagal menghapus pesan dengan ID {message_id}: {response.status_code}')
+                    print(Fore.GREEN + f'Pesan dengan ID {message_id} berhasil dikirim')
         else:
             print(f'Gagal mendapatkan pesan di channel: {response.status_code}')
 
