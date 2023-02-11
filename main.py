@@ -54,7 +54,7 @@ while True:
                 break
             else:
                 time.sleep(waktu1)
-                    print(Fore.GREEN + f'Pesan dengan ID {message_id} berhasil dikirim')
+
         else:
             print(f'Gagal mendapatkan pesan di channel: {response.status_code}')
 
