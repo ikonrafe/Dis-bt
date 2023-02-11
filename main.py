@@ -65,7 +65,7 @@ while True:
   
 # function call
 
-        print(Fore.YELLOW + payload[countdown(int(t))])
+        print(Fore.RED + payload[countdown(int(t))])
 
 
         response = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages', headers=headers)
